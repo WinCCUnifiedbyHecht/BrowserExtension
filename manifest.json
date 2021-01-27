@@ -1,0 +1,26 @@
+{
+  "name": "WinCC Unified AutoLogin",
+  "version": "1.0",
+  "description": "Login automatically when browsing to a WinCC Unified Start page",
+  "permissions": ["storage", "tabs", "https://*/"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "32": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "32": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "manifest_version": 2
+}
