@@ -10,7 +10,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     // console.log('page fully loaded');
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       // only care about wincc unified runtime websites
-      if (firstTime && tabs.length && tabs[0].url.endsWith('/WebRH') || tabs[0].url.endsWith('/webrh') && tabs[0].title === 'WinCC Unified') {
+      if (firstTime && tabs.length && tabs[0].url.toLowerCase().endsWith('/webrh') && tabs[0].title === 'WinCC Unified') {
         // get the saved user name
         chrome.storage.sync.get('user', function (data) {
           if (!data.user) {
