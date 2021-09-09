@@ -1,6 +1,6 @@
 {
   "name": "WinCC Unified AutoLogin",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Login automatically when browsing to a WinCC Unified Start page",
   "permissions": ["storage", "tabs", "https://*/"],
   "background": {
