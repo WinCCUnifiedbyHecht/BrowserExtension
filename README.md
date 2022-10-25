@@ -1,3 +1,5 @@
+testet with chrome 106.0.5249.119
+
 How to create this browser extension
 1. Develop the code (most important is the manifest.json and the background.js)
 2. Go to Chrome: Extensions
@@ -8,7 +10,7 @@ How to create this browser extension
 How to use AutoLogOff and Login with user by URL:
 1. Add a button with name "Logout" to your main start screen and make sure the button is always there (the button can also be outside the visible area of your screen).
 2. Add an event to the button on left mouse click with system function "LogOff"
-3. Download to runtime and add the credentials of the user in the browser URL, e.g.: https://winccunified/WebRH?user=UMCAdmin&password=Siemens123!
+3. Download to runtime and add the credentials of the user in the browser URL
 
 How to use Custom Login in TIA Portal:
 0. make sure you set up AutoLogOff functionality
