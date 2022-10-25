@@ -1,13 +1,23 @@
 {
   "name": "WinCC Unified AutoLogin",
-  "version": "2.0",
+  "version": "3.0",
   "description": "Login automatically when browsing to a WinCC Unified Start page",
-  "permissions": ["storage", "tabs", "https://*/"],
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": [
+    "https://*/"
+  ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js",
+    "type": "module"
   },
-  "browser_action": {
+  "web_accessible_resources": [
+    {
+      "resources": ["unifiedbuttonclick.js", "unifiedIPbuttonclick.js", "votbuttonclick.js"],
+      "matches": ["https://*/*"],
+      "use_dynamic_url": true
+    }
+  ],
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon.png",
@@ -22,5 +32,5 @@
     "48": "images/icon.png",
     "128": "images/icon.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
